@@ -1,11 +1,11 @@
-opencv project 
-capturing and showing webcam
+Opencv project 
+Capturing and showing webcam
 fps 30+
 
 How to run
-change the directory
-cd  .qodo
-cd HybridAI
-python main.py 
+Change the directory
+--cd  .qodo
+---cd HybridAI
+----python main.py 
 
 
