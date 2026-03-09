@@ -1,5 +1,5 @@
 import cv2
-import time
+from utils import calculate_fps
 
 cap = cv2.VideoCapture(0)
 
@@ -12,10 +12,7 @@ while True:
         print("Failed to grab frame")
         break
 
-    # Calculate FPS
-    current_time = time.time()
-    fps = 1 / (current_time - prev_time) if prev_time != 0 else 0
-    prev_time = current_time
+    fps, prev_time = calculate_fps(prev_time)
 
     # Put FPS on screen
     cv2.putText(frame, f"FPS: {int(fps)}", (20, 40),
